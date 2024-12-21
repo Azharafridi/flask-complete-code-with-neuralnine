@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Index_2 Page{% endblock %}
+
+{% block content %}
+
+    <h1>Hello Flask community</h1>
+    <form method="POST" action="{{ url_for('index_2') }}">
+        <input type = "text" name = "username" placeholder = "Enter Username">
+        <input type = "password" name = "password" placeholder = "Enter Password">
+        <input type = "submit" value="LOGIN">
+    </form>
+
+    <h1>File upload section</h1>
+    <form method="POST" action="{{ url_for('upload_file') }}" enctype="multipart/form-data">
+        <input type="file" name="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel, text/csv, text/plain" required = 'required'>
+
+
+        <input type="Submit" value="Upload file">
+    </form>
+
+{% endblock %}
