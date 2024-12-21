@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template,redirect ,url_for
 
 app = Flask(__name__, template_folder='templates')
 
@@ -28,6 +28,10 @@ def repeat(s, times=2):
 @app.template_filter('alternate_case')
 def alternate_case(s):
     return ''.join([c.upper() if i % 2 == 0 else c.lower() for i, c in enumerate(s)])
+
+@app.route('/redirect_endpoint')
+def redirect_page():
+    return redirect(url_for('other'))
 
 if __name__ == '__main__':
     app.run(host= '0.0.0.0', port=5555, debug=True)
