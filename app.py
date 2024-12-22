@@ -41,5 +41,7 @@ def handle_url_params():
     else:
         print("some parameters are missing")
 
+
+
 if __name__ == '__main__':
     app.run(host = '0.0.0.0' ,port = 5555, debug = True) 
