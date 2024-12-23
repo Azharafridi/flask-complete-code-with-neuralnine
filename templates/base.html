@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Default Value{% endblock %}</title>
+    <link rel="stylesheet", type="text/css", href="/css/style.css">
+    <link rel="stylesheet", type="text/css", href="/css/bootstrap.css">
+
 
 </head>
 <body>
     <p>This will always be here.</p>
-    {% block content %}{% endblock %}
+    {% block content %}
+    {% endblock %}
+    <script src="/js/bootstrap.js"></script>
 </body>
 </html>
